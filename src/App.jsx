@@ -12,11 +12,13 @@ function App() {
   }
 
   function handleStop(){
-    clearInterval(timeRef.current)
+    clearInterval(timeRef.current);
+    timeRef.current = null;
   }
 
   function handleReset(){
-    setTime(0)
+    handleStop();
+    setTime(0);
   }
 
   return (
